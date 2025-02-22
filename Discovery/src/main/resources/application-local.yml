@@ -1,0 +1,15 @@
+server:
+  port: 7000
+
+eureka:
+  server:
+    enableSelfPreservation: true
+  instance:
+    hostname: localhost # hostname where Eureka server run
+    leaseRenewalIntervalInSeconds: 50 # how often client sends heartbeat to server
+    leaseExpirationDurationInSeconds: 60  # how long server waits before removing inactive instance
+  client:
+    register-with-eureka: false # don't register itself with Eureka
+    fetch-registry: false # don't fetch registry info from Eureka
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  # Eureka server url

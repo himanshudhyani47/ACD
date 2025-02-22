@@ -1,0 +1,13 @@
+server:
+  port: 9002
+
+eureka:
+  instance:
+    preferIpAddress: true
+    host: localhost
+    port: 7002
+  client:
+    registerWithEureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.host}:${eureka.instance.port}/eureka/

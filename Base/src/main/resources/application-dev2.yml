@@ -1,0 +1,39 @@
+eureka:
+  server:
+    host: localhost
+    port: 7002
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    # needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.server.host}:${eureka.server.port}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+  security:
+    enabled: false
+
+spring:
+  #  application:
+  #    name:   # This property is set within the java code
+  config:
+    import: "configserver:" # Name configserver is the syntax don't change it to config-server
+  cloud:
+    config:
+      discovery:
+        enabled: true  # Enables fetching config via Eureka Discovery
+        service-id: config-server  # Eureka service ID of the Config Server
+      fail-fast: true  # If config retrieval fails, stop startup
+  instance:
+    prefer-ip-address: true

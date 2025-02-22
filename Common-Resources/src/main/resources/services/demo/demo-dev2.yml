@@ -1,0 +1,4 @@
+description: This is dev2 configuration for demo2 spring boot project
+
+server:
+  port: 19002

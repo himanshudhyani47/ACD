@@ -1,0 +1,4 @@
+description: This is local configuration for demo spring boot project..........===#####
+
+server:
+  port: 19000

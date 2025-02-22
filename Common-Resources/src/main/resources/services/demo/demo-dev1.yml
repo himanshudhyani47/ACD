@@ -1,0 +1,4 @@
+description: This is dev1 configuration for demo spring boot project.
+
+server:
+  port: 19001
