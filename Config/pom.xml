@@ -7,7 +7,6 @@
         <artifactId>Common-Parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.services</groupId>
     <artifactId>Config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Config</name>
@@ -26,7 +25,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-<!--        After adding this dependency work kar raha hai below depedency also comming rom cloud-config-server but version is 3.2.0-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
