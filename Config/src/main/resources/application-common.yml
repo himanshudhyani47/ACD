@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config-server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+    env:
+      show-values: ALWAYS # To unmasked the value in env
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    # The startup value changing forces the cache to refresh. This helps other microservices detect service restarts.
+    metadata-map:
+      startup: ${random.int}
+  client:
+    registryFetchIntervalSeconds: 5
+    register-with-eureka: true

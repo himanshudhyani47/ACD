@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: admin-ui
+
+eureka:
+  client:
+    register-with-eureka: true  # Don't Register the admin server with Eureka
+    fetch-registry: true  # Fetch the registry to discover other services

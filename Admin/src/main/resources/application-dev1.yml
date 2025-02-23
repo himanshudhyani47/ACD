@@ -7,7 +7,5 @@ eureka:
     host: localhost
     port: 7001
   client:
-    register-with-eureka: true  # Don't Register the admin server with Eureka
-    fetch-registry: true  # Fetch the registry to discover other services
     serviceUrl:
       defaultZone: http://${eureka.instance.host}:${eureka.instance.port}/eureka/
