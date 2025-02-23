@@ -23,6 +23,10 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+    env:
+      show-values: ALWAYS # To unmasked the value in env
+  security:
+    enabled: false
 
 spring:
   application:
