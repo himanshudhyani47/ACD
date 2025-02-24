@@ -3,13 +3,13 @@ Setup demonstrates dynamic service registration, centralized configuration resol
 
 ## Intellij VM arguments:
     1. Discovery
-        -Dspring.profiles.active=dev1,common
+        -Dspring.profiles.active=common,dev2
     2. Admin
-        -Dspring.profiles.active=dev1,common
+        -Dspring.profiles.active=common,dev2
     3. Config
-        -Dspring.profiles.active=dev1,native,common -DRESOURCES_DIR=D:\Workspace\ACD\Common-Resources\src\main\resources
+        -Dspring.profiles.active=common,dev2,native -DRESOURCES_DIR=D:\Workspace\ACD\Common-Resources\src\main\resources
     4. Demo
-        -Dspring.profiles.active=dev1,common
+        -Dspring.profiles.active=common,dev2
 
 ## Build order:
     1. Common-Parent 

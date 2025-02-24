@@ -6,16 +6,3 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.server.host}:${eureka.server.port}/eureka/
 
-spring:
-  #  application:
-  #    name:   # This property is set within the java code
-  config:
-    import: "configserver:" # Name configserver is the syntax don't change it to config-server
-  cloud:
-    config:
-      discovery:
-        enabled: true  # Enables fetching config via Eureka Discovery
-        service-id: config-server  # Eureka service ID of the Config Server
-      fail-fast: true  # If config retrieval fails, stop startup
-  instance:
-    prefer-ip-address: true

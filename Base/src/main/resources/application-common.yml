@@ -5,7 +5,7 @@ eureka:
     metadata-map:
       startup: ${random.int}    # needed to trigger info and endpoint update after restart
   client:
-    registryFetchIntervalSeconds: 5
+    registryFetchIntervalSeconds: 30 # Fetch registry every 30 seconds
     register-with-eureka: true
 
 management:
@@ -20,3 +20,17 @@ management:
       show-values: ALWAYS # To unmasked the value in env
   security:
     enabled: false
+
+spring:
+  #  application:
+  #    name:   # This property is set within the java code
+  config:
+    import: "configserver:" # Name configserver is the syntax don't change it to config-server
+  cloud:
+    config:
+      discovery:
+        enabled: true  # Enables fetching config via Eureka Discovery
+        service-id: config-server  # Eureka service ID of the Config Server
+      fail-fast: true  # If config retrieval fails, stop startup
+  instance:
+    prefer-ip-address: true

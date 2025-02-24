@@ -17,11 +17,11 @@ management:
 
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 10
+    leaseRenewalIntervalInSeconds: 10 # how often client sends heartbeat to server. This value should be less than leaseExpirationDurationInSeconds
     health-check-url-path: /actuator/health
     # The startup value changing forces the cache to refresh. This helps other microservices detect service restarts.
     metadata-map:
       startup: ${random.int}
   client:
-    registryFetchIntervalSeconds: 5
+    registryFetchIntervalSeconds: 30 # Fetch registry every 30 seconds
     register-with-eureka: true
