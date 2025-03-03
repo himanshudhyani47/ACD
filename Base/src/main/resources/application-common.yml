@@ -34,3 +34,5 @@ spring:
       fail-fast: true  # If config retrieval fails, stop startup
   instance:
     prefer-ip-address: true
+  jmx:  # To allow user beans to be accessed via JMX. If not enabled, then JMX will not expose user beans.
+    enabled: true

@@ -30,9 +30,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
+        <!--This will expose the JMX option in the springboot client UI -->
+        <dependency>
+            <groupId>org.jolokia</groupId>
+            <artifactId>jolokia-support-spring</artifactId>
+        </dependency>
     </dependencies>
-
+    <!--Added to avoid error main class not found. -->
     <build>
         <plugins>
             <plugin>

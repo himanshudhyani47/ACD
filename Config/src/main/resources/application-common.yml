@@ -4,9 +4,12 @@ spring:
 
 management:
   endpoints:
-    web:
+    jmx:
       exposure:
         include: "*"
+    web:
+      exposure:
+        include: "*" # To expose all endpoints
   endpoint:
     health:
       show-details: ALWAYS
