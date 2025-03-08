@@ -1,0 +1,7 @@
+server:
+  port: 20002
+
+datasource:
+  jdbcurl: jdbc:sqlserver://himanshu:1433;databaseName=dev2;encrypt=false;
+  username: springboot
+  password: admin
