@@ -1,0 +1,8 @@
+server:
+  port: 21001
+
+spring:
+  datasource:
+    username: springboot
+    password: admin
+    url: jdbc:sqlserver://himanshu:1433;databaseName=dev1;encrypt=false;

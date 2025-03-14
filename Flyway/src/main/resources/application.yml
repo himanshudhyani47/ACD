@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: FlywayApp
+  flyway:
+    baseline-on-migrate: true

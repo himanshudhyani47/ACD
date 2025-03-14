@@ -1,0 +1,1 @@
+1. for pom and yml config refer: https://www.geeksforgeeks.org/spring-boot-flyway-database/
