@@ -1,4 +1,4 @@
-package com.services.Batch.common.config;
+package com.services.batch.common.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -41,7 +41,7 @@ public class RepositoryManager {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder, DataSource dataSource) {
         return builder
                 .dataSource(dataSource)
-                .packages("com.services.dao.model")
+                .packages("com.services.dao.entity")
                 .build();
     }
 

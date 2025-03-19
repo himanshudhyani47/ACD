@@ -7,7 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Transactions")
@@ -18,10 +17,10 @@ public class Transactions {
     private Long transactionId;
 
     @Column(name = "CUSTOMER_ID")
-    private String customerId;
+    private Long customerId;
 
     @Column(name = "TRANSACTION_DATE")
-    private LocalDateTime transactionDate;
+    private String transactionDate;
 
     @Column(name = "PRODUCT_ID")
     private String productId;
@@ -49,19 +48,19 @@ public class Transactions {
         this.transactionId = transactionId;
     }
 
-    public String getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(long customerId) {
         this.customerId = customerId;
     }
 
-    public LocalDateTime getTransactionDate() {
+    public String getTransactionDate() {
         return transactionDate;
     }
 
-    public void setTransactionDate(LocalDateTime transactionDate) {
+    public void setTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
     }
 
