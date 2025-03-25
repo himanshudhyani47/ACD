@@ -23,5 +23,5 @@ utilized Flyway for database migrations, and used Mockaroo for generating dummy 
     1. Discovery 
     2. Admin
     3. Config
-    4. Demo
+    4. Batch
 
