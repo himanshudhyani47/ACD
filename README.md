@@ -1,5 +1,7 @@
-# ACD
-Setup demonstrates dynamic service registration, centralized configuration resolution, and real-time service health monitoring.
+# Description
+Spring Boot application focused on data migration from SQL Server to MySQL using Spring Batch, with
+externalized configuration, integrated with Spring Boot Admin and Eureka Server for monitoring and service discovery,
+utilized Flyway for database migrations, and used Mockaroo for generating dummy data.
 
 ## Intellij VM arguments:
     1. Discovery
