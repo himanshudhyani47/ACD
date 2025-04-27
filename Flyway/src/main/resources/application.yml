@@ -1,6 +1,14 @@
+# Common configuration file for the Flyway application.
+# Defines application properties, Flyway settings, and database migration configurations.
 spring:
   application:
     name: FlywayApp
   flyway:
-    baseline-on-migrate: true
-    cleanDisabled: false
+    clear:
+      sqlServer: false # Flag to enable or disable cleaning of the SQL Server database before migration.
+      mySql: false # Flag to enable or disable cleaning of the MySQL database before migration.
+    sql-base-location: "classpath:db/migration" # Base location for SQL migration scripts.
+    sql:
+      locations:
+        sqlserver: ${spring.flyway.sql-base-location}/sqlserver
+        mysql: ${spring.flyway.sql-base-location}/mysql

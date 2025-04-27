@@ -1,8 +1,0 @@
--- Not able to execute CreateCustomer and CreateTransactions
--- Below was the error
-    -- Found non-empty schema(s) [dbo] but no schema history table.
-    -- Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
--- So, I have added the below line in the application.properties file
-    -- flyway.baseline-on-migrate: true
-    -- Added V1__Createbaseline.sql file in the db/migration folder
-    -- Make the CreateCustomer and CreateTransactions V2 and V3 respectively

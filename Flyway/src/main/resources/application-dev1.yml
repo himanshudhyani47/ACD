@@ -3,6 +3,11 @@ server:
 
 spring:
   datasource:
-    username: springboot
-    password: admin
-    url: jdbc:sqlserver://himanshu:1433;databaseName=dev1;encrypt=false;
+    sqlserver:
+      url: jdbc:sqlserver://himanshu:1433;databaseName=dev1;encrypt=false
+      username: springboot
+      password: admin
+    mysql:
+      url: jdbc:mysql://himanshu:3306/dev1?useSSL=false
+      username: springboot
+      password: admin
