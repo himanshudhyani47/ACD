@@ -3,3 +3,4 @@ spring:
     name: FlywayApp
   flyway:
     baseline-on-migrate: true
+    cleanDisabled: false
